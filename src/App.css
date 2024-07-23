@@ -1,0 +1,329 @@
+#root{
+  /* height: 100vh;
+  width: 100vw; */
+  border: 3px solid yellow;
+  
+  /* background-color: #0c0c1d; */
+  background: linear-gradient(180deg, #0c0c1d,#17173b,#0c0c1d);  
+}
+/* #10965e #111132 */
+body {
+  /* background-color: #0c0c1d; */
+  color: lightgray;
+}
+/* navbar section css */
+nav{
+  margin-left: 27rem;
+}
+a{
+  position: relative;
+  text-decoration: none;
+  padding: 0 10px;
+}
+a::after{
+  content: "";
+  position: absolute;
+  background-color: orange;
+  height:3px;
+  width:o;
+  bottom:-10px;
+  left:0;
+  transition: 0.3s;
+}
+
+
+a:hover::after{
+width: 100%;
+}
+/* .sec{
+    
+  width:5rem;
+  font-size: x-large;
+  font-weight: 700;
+  position: relative;
+  color: rgb(204, 37, 37);
+} */
+/* .sec:before{
+  content: "";
+  position: absolute;
+  left:0;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  background-color: rgb(100, 69, 185);
+  border-left: 2px solid rgb(19, 3, 77);
+  animation: animate 4s steps(12) infinite;
+} */
+
+/* @keyframes animate {
+  40%,60%{
+      left:calc(100% + 4px);
+  }
+  100%{
+      left: 0%;
+  }
+} */
+
+.herosection{
+  /* border:3px solid lightblue; */
+  height: 35rem;
+}
+
+.image_container img{
+  /* border: 3px solid brown; */
+  margin-right: 1rem;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 23rem;
+  
+}
+.info_container{
+  margin-left: 4rem;
+margin-top:3rem ;
+margin-right: 50px;
+  /* border: 3px solid red; */
+  width:50rem;
+  font-size: 2rem;
+}
+.hero_span{
+  margin-top: 2rem;
+}
+.animated_info{
+  font-size: 50vh;
+  position: absolute;
+  bottom: -120px;
+  white-space: nowrap;
+  color:#ffffff09;
+  width: 150%;
+  font-weight: bold;
+}
+.resume_section{
+
+  .resume_btn{
+    border: 1.5px solid white;
+    height:3rem;
+    width:7rem;
+    color: white;
+    background-color: transparent;
+    /* margin: 1.5rem; */
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}
+.resume_section:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform linear 300ms;
+  width:10rem;
+  height: 5rem;
+}
+
+
+/* skills section css */
+
+.skills_section p{
+  text-align: center;
+  margin-top: 15rem;
+  height: 5rem;
+  font-weight: bold;
+  /* font-size: xx-large; */
+  padding: 1.5rem;
+}
+.skills_section:hover{
+  transition: linear 0.05s;
+}
+.slider{
+  height:250px;
+  margin: auto;
+  position: relative;
+  width:90%;
+  display: grid;
+  place-items: center;
+  /* border: 3px solid green; */
+  margin-top: 3rem;
+}
+.slidetrack{
+  display: flex;
+  width:calc(250px*14);
+  animation: scroll 40s linear infinite;
+}
+.slidetrack:hover{
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 3));
+  }
+  
+}
+.slide{
+  height: 100px;
+  width:250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+.slide img{
+  width:100%;
+  height: 160px;
+  transition: transform 1%;
+}
+.slide img:hover{
+  cursor: pointer;
+  transform: translatez(20px);
+  transition: linear 0.35s;
+}
+
+.slider::before,.slider::after{
+  background: linear-gradient(to right,);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before{
+  top:0;
+  left:0;
+}
+.slider::after{
+  right: 0;
+  top:0;
+  transform: rotateZ('100deg');
+}
+
+
+/* project section css */
+.project_section{
+  /* border: 3px solid green; */
+  height:80rem;
+  width:100%;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+.project_slide{
+  border: 3px solid white;
+  margin: 2rem;
+  padding: 2rem;
+  height: 25rem;
+  /* border: 3px solid yellowgreen; */
+}
+.project_info{
+   margin-left: 2rem;
+   /* border: 3px solid red; */
+   width:100rem;
+   padding: 2rem;
+}
+.project_info .title{
+/* border:3px solid red; */
+margin-bottom: 2rem;
+height: 3rem;
+padding: .5rem;
+font-size: 1.5rem;
+font-weight: bold;
+}
+.project_info .description{
+  border:3px solid green;
+margin-bottom: 2rem;
+height: fit-content;
+padding: .5rem;
+
+
+}
+.project_info .code_demo{
+/* border:3px solid yellow; */
+height: 3rem;
+}
+.code_demo .demo,.source_code{
+  width: 5rem;
+  height:2rem;
+  /* border: 3px solid red; */
+  margin: .5rem;
+  text-align: center;
+  background-color: orange;
+  border-radius: .3rem;
+ color: #17173b;
+ font-size: large;
+}
+ 
+.demo:hover,.source_code:hover{
+  cursor: pointer;
+  background-color: transparent;
+ color: orange;
+ transform: scale(1.2);
+ transition: transform linear 1s;
+}
+.project_snapshots{
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  border: 5px solid #be1717;
+  height: fit-content;
+  
+}
+.project_snapshots .img{
+  height: 50rem;
+
+}
+/* contact section css */
+.form_section{
+  /* border:3px solid red; */
+  margin-top: 15rem;
+}
+.contact_heading{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  /* border: 3px solid red; */
+  font-size: 3rem;
+}
+form{
+  /* border: 3px solid yellow; */
+  width: 60%;
+  height: 30rem;
+  padding: 3rem;
+}
+input{
+  margin: 0.4rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width:85%;
+  outline: none;
+}
+.form_input{
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+textarea{
+  margin: 0.4rem;
+  /* border: 0.13rem solid black; */
+  width: 85%;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+.submit_input{
+  background-color: orange;
+  color: #111132;
+  cursor: pointer;
+}
+.personal_info{
+  /* border: 3px solid green; */
+  width:40%;
+  height:30rem;
+}
+.personal{
+  font-size: large;
+  font-weight: 400;
+  /* border: 3px solid red; */
+  /* text-align: center; */
+  margin-bottom: 0.25rem;
+}
